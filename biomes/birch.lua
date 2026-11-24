@@ -134,5 +134,5 @@ core.register_decoration({
     schematic = schempath .. "/birch/tree_top.mts",
     check_offset = 0,
     num_spawn_by = 8,
-    spawn_by = "air"
+    spawn_by = {"air", "new_world:birch_leaves"}
 })

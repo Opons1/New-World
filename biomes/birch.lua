@@ -38,16 +38,31 @@ core.register_decoration({
     deco_type = "simple",
     place_on = "new_world:birch_grass",
     sidelen = 4,
-    fill_ratio = 0.05,
+    fill_ratio = 0.01,
     biomes = {"new_world:birch"},
     decoration = "new_world:birch",
     height = 6,
     height_max = 13,
-    spawn_by = "air",
+    spawn_by = {"air", "new_world:birch_leaves"},
     check_offset = 0,
     num_spawn_by = 8,
     place_offset_y = -1,
     flags = "force_placement",
+})
+
+new_world.register_mult_schematic(schempath .. "/birch/tree_base", 5, {
+    name = "new_world:birch:tree_base",
+    deco_type = "schematic",
+    place_on = "new_world:birch_grass",
+    sidelen = 4,
+    fill_ratio = 0.05,
+    biomes = {"new_world:birch"},
+    spawn_by = "air",
+    check_offset = 0,
+    num_spawn_by = 8,
+    place_offset_y = 0,
+    flags = "force_placement, place_center_x, place_center_z,",
+    rotation = "random"
 })
 --fallen logs
 core.register_decoration({
@@ -116,5 +131,8 @@ core.register_decoration({
     place_on = "new_world:birch",
     fill_ratio = 10,
     flags = "place_center_x, place_center_z, all_floors",
-    schematic = schempath .. "/birch/tree_top.mts"
+    schematic = schempath .. "/birch/tree_top.mts",
+    check_offset = 0,
+    num_spawn_by = 8,
+    spawn_by = "air"
 })

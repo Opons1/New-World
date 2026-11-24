@@ -5,6 +5,7 @@ core.clear_registered_decorations()
 core.clear_registered_biomes()
 local path = core.get_modpath("new_world")
 
+dofile(path .. "/helpers.lua")
 dofile(path .. "/trunk.lua")
 dofile(path .. "/leaves.lua")
 dofile(path .. "/flowers.lua")

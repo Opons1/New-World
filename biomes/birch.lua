@@ -25,7 +25,7 @@ core.register_decoration({
     sidelen = 16,
 
     fill_ratio = 0.0002,
-    place_offset_y = -2,
+    place_offset_y = -1,
     biomes = {"new_world:birch"},
     y_max = 50,
     y_min = 1,
@@ -48,6 +48,7 @@ core.register_decoration({
     spawn_by = "air",
     check_offset = 0,
     num_spawn_by = 8,
+    place_offset_y = -1
 })
 --fallen logs
 core.register_decoration({

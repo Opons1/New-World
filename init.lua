@@ -4,4 +4,5 @@ core.clear_registered_biomes()
 local mp = core.get_modpath("new_world")
 
 dofile(mp .. "/trunk.lua")
+dofile(mp .. "/leaves.lua")
 dofile(mp .. "/flowers.lua")

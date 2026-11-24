@@ -132,7 +132,8 @@ core.register_decoration({
     fill_ratio = 10,
     flags = "place_center_x, place_center_z, all_floors",
     schematic = schempath .. "/birch/tree_top.mts",
+    biomes = {"new_world:birch"},
     check_offset = 0,
     num_spawn_by = 8,
-    spawn_by = {"air", "new_world:birch_leaves"}
+    spawn_by = {"air", "new_world:birch_leaves", "ignore"}
 })

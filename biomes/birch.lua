@@ -56,3 +56,17 @@ core.register_decoration({
     param2 = 0,
     param2_max = 3,
 })
+--trees part 1
+core.register_decoration({
+    name = "new_world:birch:tree_base",
+    deco_type = "simple",
+    place_on = "new_world:birch_grass",
+    sidelen = 8,
+    fill_ratio = 0.05,
+    biomes = {"new_world:birch"},
+    decoration = "new_world:birch",
+    param2 = 0,
+    param2_max = 3,
+    height = 4,
+    height_max = 9
+})

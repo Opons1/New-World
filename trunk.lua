@@ -11,6 +11,8 @@ function new_world.register_hollow_trunk(name, description, texture)
 	    groups = {tree = 1, choppy = 3, oddly_breakable_by_hand = 1, flammable = 3},
         paramtype = "light",
         drawtype = "mesh",
+        shaded  = false,
+        light_source = 1;
         mesh = "hollowtrunk.obj",
         paramtype2 = "facedir",
         is_ground_content = false,

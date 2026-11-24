@@ -45,5 +45,5 @@ function new_world.register_trunks(name, description, tiles, uvtiles)
     new_world.register_trunk(name, description, tiles)
     new_world.register_hollow_trunk(name .. "_hollow", "Hollow " .. description, uvtiles)
 end
-new_world.register_trunks("new_world:birch", "Birch", {"prototypeexternalbirch1.png"}, "testwoodhollow.png")
+new_world.register_trunks("new_world:birch", "Birch", {"prototypebirchtop.png", "prototypebirchtop.png", "prototypeexternalbirch1.png"}, "testwoodhollow.png")
 new_world.register_hollow_trunk("test_trunk", "Test Trunk", "test_wood.png")

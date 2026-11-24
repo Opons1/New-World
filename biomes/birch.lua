@@ -37,14 +37,12 @@ core.register_decoration({
     name = "new_world:birch:tree_base",
     deco_type = "simple",
     place_on = "new_world:birch_grass",
-    sidelen = 8,
+    sidelen = 4,
     fill_ratio = 0.05,
     biomes = {"new_world:birch"},
     decoration = "new_world:birch",
-    param2 = 0,
-    param2_max = 3,
-    height = 4,
-    height_max = 9,
+    height = 6,
+    height_max = 13,
     spawn_by = "air",
     check_offset = 0,
     num_spawn_by = 8,
@@ -66,7 +64,13 @@ core.register_decoration({
     schematic = schempath .. "/birch/hollow.mts",
     rotation = "random",
 })
-
+--grass
+core.register_decoration({
+    deco_type = "simple",
+    place_on = "new_world:birch_grass",
+    fill_ratio = 0.4,
+    decoration = {"default:grass_1" , "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", },
+})
 --flowers
 core.register_decoration({
     name = "new_world:birch:flowersblue",
@@ -103,4 +107,14 @@ core.register_decoration({
     decoration = "new_world:small_rocks",
     param2 = 0,
     param2_max = 3,
+})
+
+--tree tops
+core.register_decoration({
+    name = "new_world:birch:tree_top1",
+    deco_type = "schematic",
+    place_on = "new_world:birch",
+    fill_ratio = 10,
+    flags = "place_center_x, place_center_z, all_floors",
+    schematic = schempath .. "/birch/tree_top.mts"
 })

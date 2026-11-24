@@ -32,16 +32,27 @@ core.register_decoration({
     rotation = "random",
 })
 
---clean up the fallen trees that stick out strangely
-
+--flowers
 core.register_decoration({
-    name = "new_world:birch:flowers",
+    name = "new_world:birch:flowersblue",
     deco_type = "simple",
     place_on = "new_world:birch_grass",
     sidelen = 4,
     fill_ratio = 0.04,
     biomes = {"new_world:birch"},
-    decoration = "new_world:flower",
+    decoration = "new_world:blue_flower",
+    param2 = 0,
+    param2_max = 3,
+})
+
+core.register_decoration({
+    name = "new_world:birch:flowersyellow",
+    deco_type = "simple",
+    place_on = "new_world:birch_grass",
+    sidelen = 4,
+    fill_ratio = 0.04,
+    biomes = {"new_world:birch"},
+    decoration = "new_world:yellow_flower",
     param2 = 0,
     param2_max = 3,
 })

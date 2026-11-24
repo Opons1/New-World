@@ -18,6 +18,23 @@ core.register_biome({
 --decorations
 local schempath = core.get_modpath("new_world") .. "/schematics"
 core.register_decoration({
+    name = "new_world:birch:fallen_log",
+    deco_type = "schematic",
+    place_on = {"new_world:birch_grass"},
+    sidelen = 8,
+
+    fill_ratio = 0.002,
+    place_offset_y = -2,
+    biomes = {"new_world:birch"},
+    y_max = 31000,
+    y_min = 1,
+    schematic = schempath .. "/birch/hollow.mts",
+    rotation = "random",
+})
+
+--clean up the fallen trees that stick out strangely
+
+core.register_decoration({
     name = "new_world:birch:flowers",
     deco_type = "simple",
     place_on = "new_world:birch_grass",
@@ -27,45 +44,4 @@ core.register_decoration({
     decoration = "new_world:flower",
     param2 = 0,
     param2_max = 3,
-})
-
-core.register_decoration({
-	name = "new_world:birch:fallen_log_1",
-	deco_type = "schematic",
-	place_on = {"new_world:birch_grass"},
-	sidelen = 16,
-
-    fill_ratio = 0.02,
-	biomes = {"new_world:birch"},
-	y_max = 31000,
-	y_min = 1,
-	schematic = schempath .. "/birch/birch_fallen_1.mts",
-	rotation = "random",
-})
-
-core.register_decoration({
-	name = "new_world:birch:fallen_log_1",
-	deco_type = "schematic",
-	place_on = {"new_world:birch_grass"},
-
-	sidelen = 16,
-    fill_ratio = 0.02,
-	biomes = {"new_world:birch"},
-	y_max = 31000,
-	y_min = 1,
-	schematic = schempath .. "/birch/birch_fallen_2.mts",
-	rotation = "random",
-})
-
-core.register_decoration({
-	name = "new_world:birch:fallen_log_1",
-	deco_type = "schematic",
-	place_on = {"new_world:birch_grass"},
-	sidelen = 16,
-    fill_ratio = 0.02,
-	biomes = {"new_world:birch"},
-	y_max = 31000,
-	y_min = 1,
-	schematic = schempath .. "/birch/birch_fallen_3.mts",
-	rotation = "random",
 })

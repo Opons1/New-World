@@ -25,7 +25,7 @@ core.register_decoration({
     sidelen = 16,
 
     fill_ratio = 0.0002,
-    place_offset_y = -1,
+    place_offset_y = -3,
     biomes = {"new_world:birch"},
     y_max = 50,
     y_min = 1,
@@ -48,7 +48,8 @@ core.register_decoration({
     spawn_by = "air",
     check_offset = 0,
     num_spawn_by = 8,
-    place_offset_y = -1
+    place_offset_y = -1,
+    flags = "force_placement",
 })
 --fallen logs
 core.register_decoration({
@@ -87,6 +88,19 @@ core.register_decoration({
     fill_ratio = 0.04,
     biomes = {"new_world:birch"},
     decoration = "new_world:yellow_flower",
+    param2 = 0,
+    param2_max = 3,
+})
+
+--pebbles
+core.register_decoration({
+    name = "new_world:birch:small_rocks",
+    deco_type = "simple",
+    place_on = "new_world:birch_grass",
+    sidelen = 4,
+    fill_ratio = 0.01,
+    biomes = {"new_world:birch"},
+    decoration = "new_world:small_rocks",
     param2 = 0,
     param2_max = 3,
 })

@@ -17,6 +17,39 @@ core.register_biome({
 
 --decorations
 local schempath = core.get_modpath("new_world") .. "/schematics"
+--rocks
+core.register_decoration({
+    name = "new_world:birch:rock",
+    deco_type = "schematic",
+    place_on = {"new_world:birch_grass"},
+    sidelen = 16,
+
+    fill_ratio = 0.0002,
+    place_offset_y = -2,
+    biomes = {"new_world:birch"},
+    y_max = 50,
+    y_min = 1,
+    schematic = schempath .. "/birch/rock.mts",
+    rotation = "random",
+})
+--trees part 1
+core.register_decoration({
+    name = "new_world:birch:tree_base",
+    deco_type = "simple",
+    place_on = "new_world:birch_grass",
+    sidelen = 8,
+    fill_ratio = 0.05,
+    biomes = {"new_world:birch"},
+    decoration = "new_world:birch",
+    param2 = 0,
+    param2_max = 3,
+    height = 4,
+    height_max = 9,
+    spawn_by = "air",
+    check_offset = 0,
+    num_spawn_by = 8,
+})
+--fallen logs
 core.register_decoration({
     name = "new_world:birch:fallen_log",
     deco_type = "schematic",
@@ -55,20 +88,4 @@ core.register_decoration({
     decoration = "new_world:yellow_flower",
     param2 = 0,
     param2_max = 3,
-})
---trees part 1
-core.register_decoration({
-    name = "new_world:birch:tree_base",
-    deco_type = "simple",
-    place_on = "new_world:birch_grass",
-    sidelen = 8,
-    fill_ratio = 0.05,
-    biomes = {"new_world:birch"},
-    decoration = "new_world:birch",
-    param2 = 0,
-    param2_max = 3,
-    height = 4,
-    height_max = 9,
-    spawn_by = "air",
-    num_spawn_by = 8,
 })

@@ -8,4 +8,5 @@ core.register_node("new_world:birch_grass", {
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_grass_footstep", gain = 0.3},
 	}),
+    light_source = 1,
 })

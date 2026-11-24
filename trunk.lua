@@ -40,6 +40,7 @@ function new_world.register_trunk(name, description, tiles)
         is_ground_content = false,
 	    sounds = default.node_sound_wood_defaults(),
     	on_place = core.rotate_node,
+        light_source = 1,
     })
 end
 

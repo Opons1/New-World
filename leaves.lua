@@ -17,6 +17,7 @@ function new_world.register_leaves(name, description, tiles, drop, chance)
         sounds = default.node_sound_leaves_defaults(),
 
         after_place_node = default.after_place_leaves,
+        light_source = 1,
     })
 
 end

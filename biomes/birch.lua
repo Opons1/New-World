@@ -23,7 +23,7 @@ core.register_decoration({
     place_on = {"new_world:birch_grass"},
     sidelen = 8,
 
-    fill_ratio = 0.002,
+    fill_ratio = 0.001,
     place_offset_y = -2,
     biomes = {"new_world:birch"},
     y_max = 31000,

@@ -1,9 +1,13 @@
 new_world = {}
 local biomes = table.copy(core.registered_biomes)
+local decorations = table.copy(core.registered_decorations)
+core.clear_registered_decorations()
 core.clear_registered_biomes()
-local mp = core.get_modpath("new_world")
+local path = core.get_modpath("new_world")
 
-dofile(mp .. "/trunk.lua")
-dofile(mp .. "/leaves.lua")
-dofile(mp .. "/flowers.lua")
-dofile(mp .. "/mushrooms.lua")
+dofile(path .. "/trunk.lua")
+dofile(path .. "/leaves.lua")
+dofile(path .. "/flowers.lua")
+dofile(path .. "/mushrooms.lua")
+dofile(path .. "/grass.lua")
+dofile(path .. "/biomes/init.lua")

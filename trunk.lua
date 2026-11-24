@@ -16,7 +16,7 @@ function new_world.register_hollow_trunk(name, description, texture)
         is_ground_content = false,
     	sunlight_propagates = true,
 	    sounds = default.node_sound_wood_defaults(),
-    	on_place = minetest.rotate_node,
+    	on_place = core.rotate_node,
         collision_box = {
             type = "fixed",
             fixed = box
@@ -37,7 +37,7 @@ function new_world.register_trunk(name, description, tiles)
         paramtype2 = "facedir",
         is_ground_content = false,
 	    sounds = default.node_sound_wood_defaults(),
-    	on_place = minetest.rotate_node,
+    	on_place = core.rotate_node,
     })
 end
 

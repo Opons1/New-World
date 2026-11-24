@@ -70,3 +70,7 @@ core.register_node("new_world:test_flower_tall_2", {
         fixed = box
     }
 })
+
+
+
+--this is a comment test

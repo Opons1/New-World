@@ -1,4 +1,10 @@
 function new_world.register_hollow_trunk(name, description, texture)
+    local box = {
+            {-0.5000, -0.5000, -0.5000, -0.3750, 0.5000, 0.3750},
+            {-0.3750, -0.5000, -0.5000, 0.5000, 0.5000, -0.3750},
+            {0.3750, -0.5000, -0.3750, 0.5000, 0.5000, 0.5000},
+            {-0.5000, -0.5000, 0.3750, 0.3750, 0.5000, 0.5000}
+        }
     core.register_node(":" .. name, {
         tiles = {texture},
         description = description,
@@ -11,6 +17,15 @@ function new_world.register_hollow_trunk(name, description, texture)
     	sunlight_propagates = true,
 	    sounds = default.node_sound_wood_defaults(),
     	on_place = minetest.rotate_node,
+        collision_box = {
+            type = "fixed",
+            fixed = box
+        },
+
+        selection_box = {
+            type = "fixed",
+            fixed = box
+        }
     })
 end
 

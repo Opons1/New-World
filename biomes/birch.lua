@@ -68,5 +68,7 @@ core.register_decoration({
     param2 = 0,
     param2_max = 3,
     height = 4,
-    height_max = 9
+    height_max = 9,
+    spawn_by = "air",
+    num_spawn_by = 8,
 })

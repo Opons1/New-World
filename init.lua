@@ -2,4 +2,4 @@ new_world = {}
 local biomes = table.copy(core.registered_biomes)
 core.clear_registered_biomes()
 local mp = core.get_modpath("new_world")
-dofile(mp .. "hollowtrunk.lua")
+dofile(mp .. "/hollowtrunk.lua")

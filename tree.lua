@@ -166,8 +166,8 @@ new_world.register_tree({
     checkpos1 = {x = -2, y = 0, z = -2},
     checkpos2 = {x = 2, y = 12, z = 2},
     --growth timer
-    mintime = 3,
-    maxtime = 5,
+    mintime = 300,
+    maxtime = 1500,
     --nearness of leaves
     radius = 3,
     --chance to get sapling

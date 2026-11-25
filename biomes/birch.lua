@@ -17,53 +17,52 @@ core.register_biome({
 
 --decorations
 local schempath = core.get_modpath("new_world") .. "/schematics"
---rocks
+--boulders
 core.register_decoration({
-    name = "new_world:birch:rock",
+    name = "new_world:birch:iron_boulder",
     deco_type = "schematic",
     place_on = {"new_world:birch_grass"},
     sidelen = 16,
 
-    fill_ratio = 0.0002,
+    fill_ratio = 0.0001,
     place_offset_y = -3,
     biomes = {"new_world:birch"},
     y_max = 50,
     y_min = 1,
-    schematic = schempath .. "/birch/rock.mts",
+    schematic = schempath .. "/birch/iron_boulder.mts",
     rotation = "random",
 })
---trees part 1
+
 core.register_decoration({
-    name = "new_world:birch:tree_base",
-    deco_type = "simple",
-    place_on = "new_world:birch_grass",
-    sidelen = 4,
-    fill_ratio = 0.01,
+    name = "new_world:birch:coal_boulder",
+    deco_type = "schematic",
+    place_on = {"new_world:birch_grass"},
+    sidelen = 16,
+
+    fill_ratio = 0.0001,
+    place_offset_y = -3,
     biomes = {"new_world:birch"},
-    decoration = "new_world:birch",
-    height = 6,
-    height_max = 13,
-    spawn_by = {"air", "new_world:birch_leaves"},
-    check_offset = 0,
-    num_spawn_by = 8,
-    place_offset_y = -1,
-    flags = "force_placement",
+    y_max = 50,
+    y_min = 1,
+    schematic = schempath .. "/birch/coal_boulder.mts",
+    rotation = "random",
 })
 
-new_world.register_mult_schematic(schempath .. "/birch/tree_base", 5, {
-    name = "new_world:birch:tree_base",
+core.register_decoration({
+    name = "new_world:birch:diamond_boulder",
     deco_type = "schematic",
-    place_on = "new_world:birch_grass",
-    sidelen = 4,
-    fill_ratio = 0.05,
+    place_on = {"new_world:birch_grass"},
+    sidelen = 16,
+
+    fill_ratio = 0.000008,
+    place_offset_y = -3,
     biomes = {"new_world:birch"},
-    spawn_by = "air",
-    check_offset = 0,
-    num_spawn_by = 8,
-    place_offset_y = 0,
-    flags = "force_placement, place_center_x, place_center_z,",
-    rotation = "random"
+    y_max = 50,
+    y_min = 1,
+    schematic = schempath .. "/birch/diamond_boulder.mts",
+    rotation = "random",
 })
+
 --fallen logs
 core.register_decoration({
     name = "new_world:birch:fallen_log",
@@ -78,6 +77,51 @@ core.register_decoration({
     y_min = 1,
     schematic = schempath .. "/birch/hollow.mts",
     rotation = "random",
+})
+--trees
+new_world.register_mult_schematic(schempath .. "/birch/tree", 6, {
+    name = "new_world:birch:tree",
+    deco_type = "schematic",
+    place_on = "new_world:birch_grass",
+    sidelen = 4,
+    fill_ratio = 0.05,
+    biomes = {"new_world:birch"},
+    spawn_by = "air",
+    check_offset = 0,
+    num_spawn_by = 8,
+    place_offset_y = 0,
+    flags = "force_placement, place_center_x, place_center_z,",
+    rotation = "random"
+})
+
+new_world.register_mult_schematic(schempath .. "/birch/tree_large", 2, {
+    name = "new_world:birch:tree_large",
+    deco_type = "schematic",
+    place_on = "new_world:birch_grass",
+    sidelen = 4,
+    fill_ratio = 0.002,
+    biomes = {"new_world:birch"},
+    spawn_by = "air",
+    check_offset = 0,
+    num_spawn_by = 8,
+    place_offset_y = 0,
+    flags = "force_placement, place_center_x, place_center_z,",
+    rotation = "random"
+})
+
+new_world.register_mult_schematic(schempath .. "/birch/tree_lucky", 1, {
+    name = "new_world:birch:tree",
+    deco_type = "schematic",
+    place_on = "new_world:birch_grass",
+    sidelen = 4,
+    fill_ratio = 0.05,
+    biomes = {"new_world:birch"},
+    spawn_by = "air",
+    check_offset = 0,
+    num_spawn_by = 8,
+    place_offset_y = 0,
+    flags = "force_placement, place_center_x, place_center_z,",
+    rotation = "random"
 })
 --grass
 core.register_decoration({
@@ -122,18 +166,4 @@ core.register_decoration({
     decoration = "new_world:small_rocks",
     param2 = 0,
     param2_max = 3,
-})
-
---tree tops
-core.register_decoration({
-    name = "new_world:birch:tree_top1",
-    deco_type = "schematic",
-    place_on = "new_world:birch",
-    fill_ratio = 10,
-    flags = "place_center_x, place_center_z, all_floors",
-    schematic = schempath .. "/birch/tree_top.mts",
-    biomes = {"new_world:birch"},
-    check_offset = 0,
-    num_spawn_by = 8,
-    spawn_by = {"air", "new_world:birch_leaves", "ignore"}
 })

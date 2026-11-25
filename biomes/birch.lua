@@ -15,8 +15,45 @@ core.register_biome({
 	humidity_point = 45,
 })
 
+core.register_biome({
+	name = "new_world:birch_dunes",
+	node_top = "default:sand",
+	depth_top = 1,
+	node_filler = "default:sand",
+	depth_filler = 2,
+	node_riverbed = "default:sand",
+	depth_riverbed = 2,
+	node_dungeon = "default:cobble",
+	node_dungeon_alt = "default:mossycobble",
+	node_dungeon_stair = "stairs:stair_cobble",
+	vertical_blend = 1,
+	y_max = 5,
+	y_min = 4,
+	heat_point = 50,
+	humidity_point = 45,
+})
+
+core.register_biome({
+	name = "new_world:birch_ocean",
+	node_top = "default:sand",
+	depth_top = 1,
+	node_filler = "default:sand",
+	depth_filler = 3,
+	node_riverbed = "default:sand",
+	depth_riverbed = 2,
+	node_cave_liquid = "default:water_source",
+	node_dungeon = "default:cobble",
+	node_dungeon_alt = "default:mossycobble",
+	node_dungeon_stair = "stairs:stair_cobble",
+	y_max = 3,
+	y_min = -255,
+	heat_point = 50,
+	humidity_point = 45,
+})
+
 --decorations
 local schempath = core.get_modpath("new_world") .. "/schematics"
+
 --boulders
 core.register_decoration({
     name = "new_world:birch:iron_boulder",

@@ -4,7 +4,7 @@ local box = {
 core.register_node("new_world:small_rocks", {
     tiles = {"default_stone.png"},
     description = "Small Rocks",
-    groups = {oddly_breakable_by_hand = 2, flammable = 3, attached_node = 1},
+    groups = {oddly_breakable_by_hand = 2, attached_node = 1},
     paramtype = "light",
     paramtype2 = "facedir",
     drawtype = "mesh",

@@ -175,7 +175,6 @@ new_world.register_tree({
     --schematics valid for tree
     grow = new_world.counter_to_table(core.get_modpath("new_world") .. "/schematics/birch/tree", 6, ".mts"), 
 })
-new_world.register_trunks("new_world:birch", "Birch", {"new_world_birch_top.png", "new_world_birch_top.png", "new_world_birch_side.png"}, "new_world_birch_hollow.png")
 core.register_alias("new_world:birch", "new_world:birch_tree")
 core.register_alias("new_world:birch_hollow", "new_world:birch_tree_hollow")
 
